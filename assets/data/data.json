@@ -1,0 +1,273 @@
+{
+  "events": [
+    {
+      "image": "./assets/images/events/news-700x435-1.jpg",
+      "title": "Events 1",
+      "date": "2025-03-25",
+      "description": "FEL and a helpful event",
+      "tag": "featured",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-2.jpg",
+      "title": "Events 2",
+      "date": "2025-04-25",
+      "description": "FEL and a helpful event",
+      "tag": "featured",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-3.jpg",
+      "title": "Events 3",
+      "date": "2025-05-25",
+      "description": "FEL and a helpful event",
+      "tag": "featured",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-4.jpg",
+      "title": "Events 4",
+      "date": "2025-06-25",
+      "description": "FEL and a helpful event",
+      "tag": "featured",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-5.jpg",
+      "title": "Events 5",
+      "date": "2025-07-25",
+      "description": "FEL and a helpful event",
+      "tag": "featured",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-4.jpg",
+      "title": "Events 6",
+      "date": "2025-04-20",
+      "description": "FEL and a helpful event",
+      "tag": "popular",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-5.jpg",
+      "title": "Events 7",
+      "date": "2025-04-21",
+      "description": "FEL and a helpful event",
+      "tag": "popular",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-4.jpg",
+      "title": "Events 8",
+      "date": "2025-04-22",
+      "description": "FEL and a helpful event",
+      "tag": "popular",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-5.jpg",
+      "title": "Events 9",
+      "date": "2025-04-23",
+      "description": "FEL and a helpful event",
+      "tag": "popular",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-4.jpg",
+      "title": "Events 10",
+      "date": "2025-04-24",
+      "description": "FEL and a helpful event",
+      "tag": "popular",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-5.jpg",
+      "title": "Events 11",
+      "date": "2025-04-25",
+      "description": "FEL and a helpful event",
+      "tag": "popular",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-4.jpg",
+      "title": "Events 6",
+      "date": "2025-04-20",
+      "description": "FEL and a helpful event",
+      "tag": "popular",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-5.jpg",
+      "title": "Events 7",
+      "date": "2025-04-21",
+      "description": "FEL and a helpful event",
+      "tag": "popular",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-4.jpg",
+      "title": "Events 8",
+      "date": "2025-04-22",
+      "description": "FEL and a helpful event",
+      "tag": "popular",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-5.jpg",
+      "title": "Events 9",
+      "date": "2025-04-23",
+      "description": "FEL and a helpful event",
+      "tag": "popular",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-4.jpg",
+      "title": "Events 20",
+      "date": "2025-04-24",
+      "description": "FEL and a helpful event",
+      "tag": "popular",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-5.jpg",
+      "title": "Events 21",
+      "date": "2025-04-25",
+      "description": "FEL and a helpful event",
+      "tag": "popular",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-4.jpg",
+      "title": "Events 22",
+      "date": "2024-04-25",
+      "description": "FEL and a helpful event",
+      "tag": "best",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-5.jpg",
+      "title": "Events 23",
+      "date": "2025-04-25",
+      "description": "FEL and a helpful event",
+      "tag": "best",
+      "url": "https://www.facebook.com/fptenglishclub"
+    },
+    {
+      "image": "./assets/images/events/news-700x435-5.jpg",
+      "title": "Events 233333",
+      "date": "2025-10-25",
+      "description": "FEL and a helpful event",
+      "tag": "no",
+      "url": "https://www.facebook.com/fptenglishclub"
+    }
+  ],
+
+  "filterEvents": [
+    {
+      "tag": "popular"
+    },
+    {
+      "tag": "featured"
+    },
+    {
+      "tag": "best"
+    },
+    {
+      "tag": "yes"
+    },
+    {
+      "tag": "no"
+    }
+  ],
+
+  "semesters": [
+    {
+      "semester": "FA24"
+    },
+    {
+      "semester": "SU24"
+    },
+    {
+      "semester": "SP24"
+    },
+    {
+      "semester": "SP25"
+    }
+  ],
+
+  "honorableExecutiveBoardMembers": [
+    {
+      "name": "A",
+      "role": "presidents",
+      "description": "asd",
+      "image": "./assets/images/people/beautiful-woman-face-portrait-brown-background.jpeg",
+      "semester": "FA24,SU24,SP24"
+    },
+    {
+      "name": "B",
+      "role": "vice president",
+      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+      "image": "./assets/images/people/senior-man-wearing-white-face-mask-covid-19-campaign-with-design-space.jpeg",
+      "semester": "FA24,SP25"
+    },
+    {
+      "name": "C",
+      "role": "secretary",
+      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+      "image": "./assets/images/people/woman-wearing-mask-face-closeup-covid-19-green-background.jpeg",
+      "semester": "FA24"
+    },
+    {
+      "name": "D",
+      "role": "treasurer",
+      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+      "image": "./assets/images/people/beautiful-woman-face-portrait-brown-background.jpeg",
+      "semester": "FA24"
+    },
+    {
+      "name": "E",
+      "role": "director",
+      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+      "image": "./assets/images/people/senior-man-wearing-white-face-mask-covid-19-campaign-with-design-space.jpeg",
+      "semester": "FA24"
+    }
+  ],
+
+  "honorableClubMembers": [
+    {
+      "name": "A",
+      "role": "members",
+      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+      "image": "./assets/images/people/beautiful-woman-face-portrait-brown-background.jpeg",
+      "semester": "FA24,SU24,SP24"
+    },
+    {
+      "name": "B",
+      "role": "members",
+      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+      "image": "./assets/images/people/senior-man-wearing-white-face-mask-covid-19-campaign-with-design-space.jpeg",
+      "semester": "FA24"
+    },
+    {
+      "name": "C",
+      "role": "members",
+      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+      "image": "./assets/images/people/woman-wearing-mask-face-closeup-covid-19-green-background.jpeg",
+      "semester": "FA24"
+    },
+    {
+      "name": "D",
+      "role": "members",
+      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+      "image": "./assets/images/people/beautiful-woman-face-portrait-brown-background.jpeg",
+      "semester": "FA24"
+    },
+    {
+      "name": "E",
+      "role": "members",
+      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+      "image": "./assets/images/people/senior-man-wearing-white-face-mask-covid-19-campaign-with-design-space.jpeg",
+      "semester": "FA24"
+    }
+  ]
+}
