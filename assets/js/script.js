@@ -530,14 +530,118 @@ function initModal() {
         modal.style.display = 'none';
     }
 }
+/*---------------------------------------
+  BANNER (EVENTS)              
+-----------------------------------------*/
+function initEventsBackground() {
+    const header = document.getElementById('events-site-header');
+    if (!header) return;
+
+    const bg = header.getAttribute('data-bg');
+    if (bg) {
+        header.style.background = `
+            linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0) 100%),
+            url('${bg}')
+        `;
+        header.style.backgroundSize = "cover";
+        header.style.backgroundPosition = "center calc(100% - 100px)";
+        header.style.backgroundRepeat = "no-repeat";
+        header.style.backgroundAttachment = "fixed";
+    }
+}
+function initHallOfFameBackground() {
+    const header = document.getElementById('hof-site-header');
+    if (!header) return;
+
+    const bg = header.getAttribute('data-bg');
+    if (bg) {
+        header.style.background = `
+            linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0) 100%),
+            url('${bg}')
+        `;
+        header.style.backgroundSize = "cover";
+        header.style.backgroundPosition = "center calc(100% - 145px)";
+        header.style.backgroundRepeat = "no-repeat";
+        header.style.backgroundAttachment = "fixed";
+    }
+}
+
+function initMemberBackground(config = { width: '130vh', height: '70vh', opacity: 0.3 }) {
+    const header = document.getElementById('modal-content');
+    if (!header) return;
+
+    const bg = header.getAttribute('data-bg');
+    if (bg) {
+        // Setup container
+        header.style.position = 'relative';
+        header.style.overflow = 'hidden';
+
+        // Remove existing image if any
+        let bgImage = header.querySelector('.background-image');
+        if (!bgImage) {
+            bgImage = document.createElement('img');
+            bgImage.className = 'background-image';
+            header.prepend(bgImage);
+        }
+
+        // Set image source
+        bgImage.src = bg;
+
+        // Apply consistent styles
+        Object.assign(bgImage.style, {
+            position: 'absolute',
+            bottom: '0',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: config.width,
+            height: config.height,
+            objectFit: 'contain', // force image to fit inside box
+            opacity: config.opacity,
+            zIndex: 0,
+            pointerEvents: 'none',
+        });
+
+        // Content above
+        header.querySelectorAll('*').forEach(el => {
+            if (el !== bgImage) {
+                el.style.position = 'relative';
+                el.style.zIndex = 1;
+            }
+        });
+    }
+}
+
+async function initHippoBackground() {
+    try {
+        const response = await fetch('./assets/data/data.json');
+        const data = await response.json();
+
+        const bgImage = data.hippo.image; // image path from JSON
+        const modalContent = document.getElementById("modal-content");
+
+        if (modalContent && bgImage) {
+            modalContent.setAttribute("data-bg", bgImage);
+        }
+
+        initMemberBackground();
+
+    } catch (error) {
+        console.error('Error setting background from JSON:', error);
+    }
+}
+
+
 
 window.onload = function () {
     // Home section
     displayOwlFeaturedEventsData();
     // Events section
     InitFiltersData();
+    initEventsBackground();
+    initHallOfFameBackground();
     // Hall Of Fame section
     InitSemestersData();
-    // Initialize the modal system (ONE TIME ONLY)
+    // Initialize the modal system (Hall Of Fame)
     initModal();
+    initHippoBackground();
 };

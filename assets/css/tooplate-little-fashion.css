@@ -39,7 +39,7 @@ https://www.tooplate.com/view/2127-little-fashion
 body,
 html {
   height: 100%;
-  background-color: black !important;
+  background: linear-gradient(to right, #0f111b 70%, #000000) !important;
 }
 
 html {
@@ -333,7 +333,7 @@ strong {
   NAVIGATION               
 -----------------------------------------*/
 .navbar {
-  background: black;
+  background: linear-gradient(to right, #0A376E, #151016);
   border-bottom: 5px solid var(--primary-color);
   position: fixed;
   top: 0;
@@ -535,6 +535,16 @@ h4 span {
   position: relative;
   overflow: hidden;
   margin-top: 86px;
+  background-position: bottom;
+  transition: background 1.2s ease-in-out;
+}
+
+.site-header span {
+  text-shadow: 1px 1px 10px black;
+}
+
+.site-header span {
+  margin-left: 30px;
 }
 
 .site-header.section-padding {
@@ -1075,11 +1085,11 @@ button:focus:not(:focus-visible) {
 
 .event-card-body {
   padding: 10px 20px;
-  background-color: var(--light-dark);
+  background: linear-gradient(to right, #1d3653, #151016);
 }
 
 .card {
-  border: 1px solid var(--dark-yellow);
+  border: 3px solid var(--dark-yellow);
 }
 
 .card h5 {
@@ -1457,7 +1467,7 @@ button:focus:not(:focus-visible) {
 }
 
 .modal-content {
-  background-color: var(--light-dark);
+  background-color: rgba(0, 0, 0, 0.8);
   margin: 5% auto;
   padding: 40px 30px;
   width: 90%;
@@ -1469,22 +1479,56 @@ button:focus:not(:focus-visible) {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.5)
 }
 
 .modal-close {
   position: absolute;
   top: 12px;
-  right: 18px;
+  right: -200px;
   font-size: 28px;
   font-weight: bold;
   color: var(--primary-color);
   cursor: pointer;
 }
 
+.modal-image-wrapper {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: auto;
+}
+
+/* Frame and member image: same size, stacked */
+.modal-image-wrapper img {
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+/* Frame sits below */
+.frame-image {
+  z-index: 0;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Member sits above */
 #modalMemberImage {
-  width: 180px;
-  height: 180px;
-  border-radius: 12px;
+  z-index: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: none;
+  position: relative;
+}
+
+#modalMemberImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
   border: 3px solid var(--dark-yellow);
@@ -1501,8 +1545,9 @@ button:focus:not(:focus-visible) {
 #modalMemberRole {
   color: var(--dark-yellow);
   font-size: 18px;
-  text-shadow: 0 0 5px var(--dark-yellow);
+  text-shadow: 0 0 5px var(--primary-color);
   margin-bottom: 25px;
+  padding: 8px;
 }
 
 .modal-section {
@@ -1533,7 +1578,7 @@ button:focus:not(:focus-visible) {
 }
 
 .modal-section p {
-  color: #ccc;
+  color: var(--dark-yellow);
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
@@ -1606,9 +1651,14 @@ button:focus:not(:focus-visible) {
   SITE FOOTER               
 -----------------------------------------*/
 .site-footer {
-  background: var(--dark-color);
+  background: linear-gradient(to right, #1d3653, #151016);
   padding-top: 5rem;
   padding-bottom: 5rem;
+  border-top: 5px solid var(--primary-color);
+}
+
+.footer-brand a {
+  color: var(--primary-color);
 }
 
 .footer-menu {
@@ -1711,10 +1761,6 @@ button:focus:not(:focus-visible) {
 
   .navbar-expand-lg .navbar-nav .nav-link {
     margin-top: 1rem;
-  }
-
-  .site-header {
-    background-position: bottom;
   }
 
   #cart-modal .modal-header .btn-close {

@@ -199,7 +199,7 @@
     {
       "name": "Jane Smith",
       "role": "President",
-      "image": "./assets/images/people/beautiful-woman-face-portrait-brown-background.jpeg",
+      "image": "./assets/images/people/hippo 1.png",
       "achievements": "Led the club to win the national championship in 2023. Expanded membership by 200% through innovative recruitment strategies.",
       "contributions": "Established the annual leadership retreat. Created a mentorship program connecting club alumni with current members.",
       "background": "Jane is a senior majoring in Business Administration with a minor in Leadership Studies. She joined the club in her freshman year and has held various leadership positions.",
@@ -247,7 +247,7 @@
     {
       "name": "Jane Smith",
       "role": "President",
-      "image": "./assets/images/people/beautiful-woman-face-portrait-brown-background.jpeg",
+      "image": "./assets/images/people/beautiful-woman-face-portrait-brown-background-removebg-preview.png",
       "achievements": "Led the club to win the national championship in 2023. Expanded membership by 200% through innovative recruitment strategies.",
       "contributions": "Established the annual leadership retreat. Created a mentorship program connecting club alumni with current members.",
       "background": "Jane is a senior majoring in Business Administration with a minor in Leadership Studies. She joined the club in her freshman year and has held various leadership positions.",
@@ -289,5 +289,9 @@
       "background": "Emily is majoring in Marketing and loves branding. She’s active in student media and fluent in digital outreach strategies.",
       "semester": "FA24,SU24"
     }
-  ]
+  ],
+
+  "hippo": {
+    "image": "./assets/images/hippo/hippo fel shirt.png"
+  }
 }
