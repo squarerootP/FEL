@@ -293,5 +293,9 @@
 
   "hippo": {
     "image": "./assets/images/hippo/hippo fel shirt.png"
+  },
+
+  "hippo1": {
+    "image": "./assets/images/hippo/hippo fel shirt.png"
   }
 }
