@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Tooplate's Little Fashion - Products</title>
+    <title>FEL Website</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,12 +54,6 @@ https://www.tooplate.com/view/2127-little-fashion
                     <strong><span>FEL</span> Club</strong>
                 </a>
 
-                <div class="d-lg-none">
-                    <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
-
-                    <a href="product-detail.html" class="bi-bag custom-icon"></a>
-                </div>
-
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
@@ -87,11 +81,9 @@ https://www.tooplate.com/view/2127-little-fashion
                         </li>
                     </ul>
 
-                    <div class="d-none d-lg-block">
-                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
-
-                        <a href="product-detail.html" class="bi-bag custom-icon"></a>
-                    </div>
+                    <a class="nav-logo" href="about.html">
+                        <img src="./assets/images/logo/logo_fel.png" class="img-fluid" alt="FEL logo">
+                    </a>
                 </div>
             </div>
         </nav>
@@ -102,8 +94,8 @@ https://www.tooplate.com/view/2127-little-fashion
 
                     <div class="col-lg-10 col-12">
                         <h1>
-                            <span class="d-block text-primary">Choose your</span>
-                            <span class="d-block text-dark">favorite stuffs</span>
+                            <span class="d-block text-primary">Hall Of Fame</span>
+                            <span class="d-block text-white">Section</span>
                         </h1>
                     </div>
                 </div>
@@ -116,12 +108,11 @@ https://www.tooplate.com/view/2127-little-fashion
                 <div class="row">
                     <div class="col-12">
                         <div class="semester-wrap">
-                            <h4 class="semester-title"><span>HONORABLE</span> MEMBERS
-                                <select class="form-select text-center semester-select" id="semester-select"
-                                    onchange="displayMembersBySemesterData(event)">
-                                    <!-- Semester will be inserted here dynamically -->
-                                </select>
-                            </h4>
+                            <h4 class="semester-title"><span>SEMESTER </span>SELECTOR</h4>
+                            <select class="form-select text-center semester-select" id="semester-select"
+                                onchange="displayMembersBySemesterData(event)">
+                                <!-- Semester will be inserted here dynamically -->
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -141,6 +132,33 @@ https://www.tooplate.com/view/2127-little-fashion
                 </div>
             </div>
         </section>
+
+        <!-- Modal Structure -->
+        <div id="memberModal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <img id="modalMemberImage" src="" alt="Member Image">
+                <h2 id="modalMemberName"></h2>
+                <p id="modalMemberRole"></p>
+
+                <div class="modal-section">
+                    <h5>Achievements</h5>
+                    <p id="modalMemberAchievements"></p>
+                </div>
+
+                <div class="modal-section">
+                    <h5>Contributions</h5>
+                    <p id="modalMemberContributions"></p>
+                </div>
+
+                <div class="modal-section">
+                    <h5>Background</h5>
+                    <p id="modalMemberBackground"></p>
+                </div>
+            </div>
+        </div>
+
+
 
     </main>
 

@@ -12,11 +12,14 @@ https://www.tooplate.com/view/2127-little-fashion
 -----------------------------------------*/
 :root {
   --white-color: #FFFFFF;
-  --primary-color: #FF4400;
+  --primary-color: #ffd700;
+  --secondary-color: rgb(255, 0, 0);
   --section-bg-color: #f0f8ff;
   --dark-color: #000000;
   --grey-color: #d0d1d1;
   --p-color: #717275;
+  --dark-yellow: #d4af36;
+  --light-dark: #252525;
 
   --body-font-family: 'Inter', sans-serif;
 
@@ -36,6 +39,7 @@ https://www.tooplate.com/view/2127-little-fashion
 body,
 html {
   height: 100%;
+  background-color: black !important;
 }
 
 html {
@@ -63,7 +67,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--dark-color);
+  color: white;
   line-height: inherit;
 }
 
@@ -329,7 +333,8 @@ strong {
   NAVIGATION               
 -----------------------------------------*/
 .navbar {
-  background: var(--white-color);
+  background: black;
+  border-bottom: 5px solid var(--primary-color);
   position: fixed;
   top: 0;
   right: 0;
@@ -359,11 +364,15 @@ h4 span {
 }
 
 .navbar-brand {
-  color: var(--dark-color);
+  color: white;
   font-size: 24px;
   font-weight: var(--font-weight-light);
   margin: 0;
   padding: 0;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -373,8 +382,39 @@ h4 span {
   margin-left: 1.5rem;
 }
 
+.nav-logo {
+  width: 6%;
+  margin: -20px;
+}
+
+.nav-logo img {
+  width: 100%;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.8);
+}
+
+.nav-logo:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1000px) {
+  .nav-logo {
+    width: 5%;
+    margin: 0;
+  }
+
+  .nav-logo img {
+    margin: 15px;
+    width: 15%;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.8);
+  }
+}
+
 .nav-link {
-  color: var(--p-color);
+  color: var(--primary-color);
   font-size: 16px;
   position: relative;
 }
@@ -385,7 +425,7 @@ h4 span {
   left: 0;
   width: 100%;
   height: 2px;
-  background: var(--grey-color);
+  background: var(--primary-color);
   content: '';
   opacity: 0;
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -406,6 +446,7 @@ h4 span {
 
 .navbar .nav-link.active,
 .navbar .nav-link:hover {
+  transform: scale(1.05);
   color: var(--primary-color);
 }
 
@@ -422,6 +463,12 @@ h4 span {
   width: 30px;
   height: 35px;
   outline: none;
+}
+
+.navbar-toggler-icon,
+.navbar-toggler-icon:before,
+.navbar-toggler-icon:after {
+  background-color: var(--primary-color) !important;
 }
 
 .navbar-toggler:focus {
@@ -484,7 +531,7 @@ h4 span {
   SITE HEADER              
 -----------------------------------------*/
 .site-header {
-  background-color: var(--section-bg-color);
+  background-color: var(--light-dark);
   position: relative;
   overflow: hidden;
   margin-top: 86px;
@@ -536,6 +583,7 @@ h4 span {
 }
 
 .slick-bottom {
+  background-color: black;
   background: linear-gradient(to top, var(--dark-color), transparent 90%);
   position: absolute;
   z-index: 2;
@@ -734,6 +782,10 @@ section {
 /*---------------------------------------
   ABOUT               
 -----------------------------------------*/
+.about {
+  background-color: black;
+}
+
 .about .nav-pills .nav-item {
   width: 100%;
 }
@@ -949,11 +1001,31 @@ button:focus:not(:focus-visible) {
 
 .view-all {
   text-transform: uppercase;
-  color: var(--p-color);
+  color: var(--primary-color);
   font-size: 13px;
   font-weight: var(--font-weight-bold);
-  border-bottom: 2px solid var(--grey-color);
+  border-bottom: 2px solid var(--primary-color);
   padding-bottom: 6px;
+  display: inline-block;
+  /* To work with hover */
+  transition: transform 0.3s ease;
+}
+
+.view-all:hover {
+  transform: scale(1.1);
+}
+
+.owl-prev,
+.owl-next {
+  background-color: var(--dark-yellow) !important;
+  color: black !important;
+  transition: transform 0.3s ease;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+  background-color: var(--primary-color) !important;
+  box-shadow: 1px 1px 8px rgb(255, 255, 0);
 }
 
 /*---------------------------------------
@@ -1003,10 +1075,24 @@ button:focus:not(:focus-visible) {
 
 .event-card-body {
   padding: 10px 20px;
+  background-color: var(--light-dark);
+}
+
+.card {
+  border: 1px solid var(--dark-yellow);
+}
+
+.card h5 {
+  color: var(--primary-color);
 }
 
 .card p {
   font-size: 18px;
+  color: var(--dark-yellow);
+}
+
+.card span {
+  color: var(--dark-yellow);
 }
 
 .card-wrap {
@@ -1018,7 +1104,7 @@ button:focus:not(:focus-visible) {
 }
 
 .card-wrap:hover .card {
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 1px 15px rgba(246, 255, 0, 0.6);
   transform: scale(1.05);
 }
 
@@ -1088,8 +1174,9 @@ button:focus:not(:focus-visible) {
   text-transform: uppercase;
   margin-bottom: 10px;
   background-color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  color: white;
+  border: 1px solid var(--dark-yellow);
+  color: black;
+  font-weight: 600;
   transition: box-shadow 0.3s all, border-color 0.3s all;
 }
 
@@ -1124,6 +1211,7 @@ button:focus:not(:focus-visible) {
   font-size: 16px;
   font-size: 600;
   margin-bottom: 15px;
+  color: var(--primary-color);
 }
 
 .filter_tag {
@@ -1132,7 +1220,8 @@ button:focus:not(:focus-visible) {
   cursor: pointer;
   margin-right: 10px;
   margin-bottom: 10px;
-  background-color: #f4f4f4;
+  background-color: var(--light-dark);
+  color: var(--primary-color);
   border-radius: 5px;
   position: relative;
   /* Make sure we can position the underline */
@@ -1163,14 +1252,14 @@ button:focus:not(:focus-visible) {
 .filter_tag.selected {
   background-color: var(--primary-color);
   /* Primary background color when selected */
-  color: white;
+  color: black;
   /* Change text color to white */
 }
 
 /* Hover effect: Slight background color change when hovering */
 .filter_tag:hover {
   background-color: var(--primary-color);
-  color: white;
+  color: black;
   transition: width 0.3s ease;
 }
 
@@ -1190,6 +1279,15 @@ button:focus:not(:focus-visible) {
 -----------------------------------------*/
 .page-link {
   color: var(--primary-color);
+  background-color: var(--light-dark);
+}
+
+.page-item.active a {
+  color: black !important;
+}
+
+.page-item.disabled a {
+  background-color: black !important;
 }
 
 .page-link:hover {
@@ -1221,34 +1319,61 @@ button:focus:not(:focus-visible) {
   SEMESTER (HALL OF FAME)        
 -----------------------------------------*/
 .semester-wrap {
-  display: inline-block;
+  display: flex;
+  align-content: center;
+}
+
+.semester-select {
+  height: 100%;
+  width: 100%;
+  max-width: 200px;
+  max-height: 80px;
+  margin: auto 0;
+  margin-left: 15px;
+  background-color: var(--light-dark);
+  border: 1px solid var(--dark-yellow);
+  color: var(--dark-yellow);
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 16px;
+  appearance: none;
+  /* Hide browser styles */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.semester-select option {
+  background-color: var(--light-dark);
+  color: var(--dark-yellow);
+}
+
+.semester-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--dark-yellow);
 }
 
 #semester-executive_boards,
 #semester-club_member {
   display: flex;
+  color: var(--dark-yellow);
 }
 
 .member-card {
   position: relative;
   border-radius: 10px;
-  border: 3px solid var(--primary-color);
+  border: 3px solid var(--dark-yellow);
   cursor: pointer;
   overflow: hidden;
   background-color: #f0f0f0;
   transition: all 0.3s ease-in-out;
   width: 100%;
-  height: 50vh;
+  height: 30vh;
 }
 
-
-.member-card-wrap:hover {
+.member-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-}
-
-.member-card:hover .member-info {
-  z-index: 1;
+  box-shadow: 1px 1px 8px rgba(255, 255, 0, 0.8);
 }
 
 .member-card img {
@@ -1267,28 +1392,7 @@ button:focus:not(:focus-visible) {
   font-weight: bold;
   color: var(--primary-color);
   text-align: center;
-}
-
-.member-info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 20px;
-  transition: transform 0.3s ease-in-out;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  word-wrap: break-word;
-  word-break: break-word;
-}
-
-
-.member-info p {
-  font-weight: bold;
-  font-size: 14px;
+  text-shadow: 1px 1px 10px black;
 }
 
 .member-name {
@@ -1298,6 +1402,8 @@ button:focus:not(:focus-visible) {
 .member-name p {
   font-weight: 500;
   font-size: 20px;
+  color: var(--dark-yellow);
+  margin-top: 5px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1333,6 +1439,137 @@ button:focus:not(:focus-visible) {
     border-radius: 4%;
   }
 }
+
+/*---------------------------------------
+  MODAL MEMBER (HALL OF FAME)              
+-----------------------------------------*/
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.modal-content {
+  background-color: var(--light-dark);
+  margin: 5% auto;
+  padding: 40px 30px;
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 12px;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+#modalMemberImage {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid var(--dark-yellow);
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+
+#modalMemberName {
+  color: var(--primary-color);
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+#modalMemberRole {
+  color: var(--dark-yellow);
+  font-size: 18px;
+  text-shadow: 0 0 5px var(--dark-yellow);
+  margin-bottom: 25px;
+}
+
+.modal-section {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.modal-section h5 {
+  position: relative;
+  margin: 0 auto 12px;
+  color: var(--dark-yellow);
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+}
+
+.modal-section h5::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background-color: var(--dark-yellow);
+  border-radius: 1px;
+}
+
+.modal-section p {
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 10px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* Fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #modalMemberImage {
+    width: 140px;
+    height: 140px;
+  }
+
+  .modal-content {
+    padding: 30px 20px;
+  }
+
+  .modal-section h5::after {
+    width: 80%;
+  }
+}
+
 
 /*---------------------------------------
   CONTACT              

@@ -197,77 +197,97 @@
 
   "honorableExecutiveBoardMembers": [
     {
-      "name": "A",
-      "role": "presidents",
-      "description": "asd",
+      "name": "Jane Smith",
+      "role": "President",
       "image": "./assets/images/people/beautiful-woman-face-portrait-brown-background.jpeg",
+      "achievements": "Led the club to win the national championship in 2023. Expanded membership by 200% through innovative recruitment strategies.",
+      "contributions": "Established the annual leadership retreat. Created a mentorship program connecting club alumni with current members.",
+      "background": "Jane is a senior majoring in Business Administration with a minor in Leadership Studies. She joined the club in her freshman year and has held various leadership positions.",
       "semester": "FA24,SU24,SP24"
     },
     {
-      "name": "B",
-      "role": "vice president",
-      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
-      "image": "./assets/images/people/senior-man-wearing-white-face-mask-covid-19-campaign-with-design-space.jpeg",
+      "name": "Daniel Nguyen",
+      "role": "Vice President",
+      "image": "./assets/images/people/portrait-british-woman.jpeg",
+      "achievements": "Coordinated internal events and workshops with record attendance. Played a key role in strategic planning for the academic year.",
+      "contributions": "Streamlined communication between departments. Built a resource library for new members.",
+      "background": "Daniel is a third-year student in Information Systems. He’s known for his organization and leadership in project coordination.",
       "semester": "FA24,SP25"
     },
     {
-      "name": "C",
-      "role": "secretary",
-      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
-      "image": "./assets/images/people/woman-wearing-mask-face-closeup-covid-19-green-background.jpeg",
-      "semester": "FA24"
-    },
-    {
-      "name": "D",
-      "role": "treasurer",
-      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
-      "image": "./assets/images/people/beautiful-woman-face-portrait-brown-background.jpeg",
-      "semester": "FA24"
-    },
-    {
-      "name": "E",
-      "role": "director",
-      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+      "name": "Sofia Hernandez",
+      "role": "Treasurer",
       "image": "./assets/images/people/senior-man-wearing-white-face-mask-covid-19-campaign-with-design-space.jpeg",
-      "semester": "FA24"
+      "achievements": "Managed club finances with zero discrepancies. Secured external sponsorships totaling $5,000.",
+      "contributions": "Created a budgeting system for all team leads. Led finance workshops for club members.",
+      "background": "Sofia is a Finance major with internship experience in accounting firms. She joined the club to help build financial transparency.",
+      "semester": "FA24,SP25"
+    },
+    {
+      "name": "Michael Chen",
+      "role": "Secretary",
+      "image": "./assets/images/people/woman-wearing-mask-face-closeup-covid-19-green-background.jpeg",
+      "achievements": "Maintained 100% meeting documentation. Organized digital archives of past club activities.",
+      "contributions": "Introduced a new system for attendance and records. Improved transparency in communication flow.",
+      "background": "Michael is a sophomore in Political Science. He has strong writing skills and is passionate about structure and process.",
+      "semester": "FA24,SP24"
+    },
+    {
+      "name": "Emily Tran",
+      "role": "Public Relations Officer",
+      "image": "./assets/images/people/beautiful-woman-face-portrait-brown-background.jpeg",
+      "achievements": "Increased club social media following by 250%. Launched the club’s first monthly newsletter.",
+      "contributions": "Ran successful promotional campaigns. Built collaborations with 3 external student orgs.",
+      "background": "Emily is majoring in Marketing and loves branding. She’s active in student media and fluent in digital outreach strategies.",
+      "semester": "FA24,SU24"
     }
   ],
 
   "honorableClubMembers": [
     {
-      "name": "A",
-      "role": "members",
-      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+      "name": "Jane Smith",
+      "role": "President",
       "image": "./assets/images/people/beautiful-woman-face-portrait-brown-background.jpeg",
+      "achievements": "Led the club to win the national championship in 2023. Expanded membership by 200% through innovative recruitment strategies.",
+      "contributions": "Established the annual leadership retreat. Created a mentorship program connecting club alumni with current members.",
+      "background": "Jane is a senior majoring in Business Administration with a minor in Leadership Studies. She joined the club in her freshman year and has held various leadership positions.",
       "semester": "FA24,SU24,SP24"
     },
     {
-      "name": "B",
-      "role": "members",
-      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
-      "image": "./assets/images/people/senior-man-wearing-white-face-mask-covid-19-campaign-with-design-space.jpeg",
-      "semester": "FA24"
+      "name": "Daniel Nguyen",
+      "role": "Vice President",
+      "image": "./assets/images/people/portrait-british-woman.jpeg",
+      "achievements": "Coordinated internal events and workshops with record attendance. Played a key role in strategic planning for the academic year.",
+      "contributions": "Streamlined communication between departments. Built a resource library for new members.",
+      "background": "Daniel is a third-year student in Information Systems. He’s known for his organization and leadership in project coordination.",
+      "semester": "FA24,SP25"
     },
     {
-      "name": "C",
-      "role": "members",
-      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+      "name": "Sofia Hernandez",
+      "role": "Treasurer",
+      "image": "./assets/images/people/senior-man-wearing-white-face-mask-covid-19-campaign-with-design-space.jpeg",
+      "achievements": "Managed club finances with zero discrepancies. Secured external sponsorships totaling $5,000.",
+      "contributions": "Created a budgeting system for all team leads. Led finance workshops for club members.",
+      "background": "Sofia is a Finance major with internship experience in accounting firms. She joined the club to help build financial transparency.",
+      "semester": "FA24,SP25"
+    },
+    {
+      "name": "Michael Chen",
+      "role": "Secretary",
       "image": "./assets/images/people/woman-wearing-mask-face-closeup-covid-19-green-background.jpeg",
-      "semester": "FA24"
+      "achievements": "Maintained 100% meeting documentation. Organized digital archives of past club activities.",
+      "contributions": "Introduced a new system for attendance and records. Improved transparency in communication flow.",
+      "background": "Michael is a sophomore in Political Science. He has strong writing skills and is passionate about structure and process.",
+      "semester": "FA24,SP24"
     },
     {
-      "name": "D",
-      "role": "members",
-      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+      "name": "Emily Tran",
+      "role": "Public Relations Officer",
       "image": "./assets/images/people/beautiful-woman-face-portrait-brown-background.jpeg",
-      "semester": "FA24"
-    },
-    {
-      "name": "E",
-      "role": "members",
-      "description": "loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
-      "image": "./assets/images/people/senior-man-wearing-white-face-mask-covid-19-campaign-with-design-space.jpeg",
-      "semester": "FA24"
+      "achievements": "Increased club social media following by 250%. Launched the club’s first monthly newsletter.",
+      "contributions": "Ran successful promotional campaigns. Built collaborations with 3 external student orgs.",
+      "background": "Emily is majoring in Marketing and loves branding. She’s active in student media and fluent in digital outreach strategies.",
+      "semester": "FA24,SU24"
     }
   ]
 }

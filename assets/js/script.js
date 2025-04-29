@@ -424,25 +424,7 @@ async function displayMembersBySemesterData(event) {
         let outputExecutiveBoardMembers = "";
         // Check if the array exists and loop through each event in the array
         filteredExecutiveBoardMembers.forEach(member => {
-            outputExecutiveBoardMembers += `
-                        <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 mt-1 mb-4 me-4">
-                            <div class="member-card-wrap">
-                                <div class="member-card">
-                                    <img data-src="${member.image}"
-                                        alt="${member.name}" class="event-card-img-top">
-                                    <div class="member-role">
-                                        <span>${member.role}</span>
-                                    </div>
-                                    <div class="member-info">
-                                        <p>${member.description}</p>
-                                    </div>
-                                </div>
-                                <div class="member-name">
-                                    <p>${member.name}</p>
-                                </div>
-                            </div>
-                        </div>
-                    `;
+            outputExecutiveBoardMembers += createMemberCard(member);
         });
         // Insert the generated HTML into the container
         document.getElementById("semester-executive_boards").innerHTML = outputExecutiveBoardMembers;
@@ -463,25 +445,7 @@ async function displayMembersBySemesterData(event) {
         let outputClubMembers = "";
         // Check if the array exists and loop through each event in the array
         filteredClubMembers.forEach(member => {
-            outputClubMembers += `
-                        <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 mt-1 mb-4 me-4">
-                            <div class="member-card-wrap">
-                                <div class="member-card">
-                                    <img data-src="${member.image}"
-                                        alt="${member.name}" class="event-card-img-top">
-                                    <div class="member-role">
-                                        <span>${member.role}</span>
-                                    </div>
-                                    <div class="member-info">
-                                        <p>${member.description}</p>
-                                    </div>
-                                </div>
-                                <div class="member-name">
-                                    <p>${member.name}</p>
-                                </div>
-                            </div>
-                        </div>
-                    `;
+            outputClubMembers += createMemberCard(member);
         });
         // Insert the generated HTML into the container
         document.getElementById("semester-club_member").innerHTML = outputClubMembers;
@@ -499,6 +463,73 @@ async function displayMembersBySemesterData(event) {
         console.error('Error fetching JSON data:', error);
     }
 }
+/*---------------------------------------
+  MODAL MEMBER (HALL OF FAME)              
+-----------------------------------------*/
+// When you build member cards, add data-* attributes
+function createMemberCard(member) {
+    return `
+    <div class="col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 mt-1 mb-4 me-4">
+        <div class="member-card-wrap">
+            <div class="member-card" 
+                data-name="${member.name || ''}"
+                data-role="${member.role || ''}"
+                data-image="${member.image || ''}"
+                data-achievements="${member.achievements || ''}"
+                data-contributions="${member.contributions || ''}"
+                data-background="${member.background || ''}">
+                <img data-src="${member.image}" alt="${member.name}" class="event-card-img-top">
+                <div class="member-role">
+                    <span>${member.role}</span>
+                </div>
+            </div>
+            <div class="member-name">
+                <p>${member.name}</p>
+            </div>
+        </div>
+    </div>`;
+}
+
+function initModal() {
+    const modal = document.getElementById('memberModal');
+    const modalCloseBtn = modal.querySelector('.modal-close');
+
+    // Click any member card
+    document.addEventListener('click', function (e) {
+        const card = e.target.closest('.member-card');
+        if (card) {
+            openMemberModal(card);
+        }
+    });
+
+    // Click close button
+    modalCloseBtn.addEventListener('click', function () {
+        closeModal();
+    });
+
+    // Click outside modal-content
+    window.addEventListener('click', function (e) {
+        if (e.target.id === 'memberModal') {
+            closeModal();
+        }
+    });
+
+    function openMemberModal(card) {
+        document.getElementById('modalMemberName').textContent = card.dataset.name || "N/A";
+        document.getElementById('modalMemberRole').textContent = card.dataset.role || "N/A";
+        document.getElementById('modalMemberImage').src = card.dataset.image || "";
+
+        document.getElementById('modalMemberAchievements').textContent = card.dataset.achievements || "N/A";
+        document.getElementById('modalMemberContributions').textContent = card.dataset.contributions || "N/A";
+        document.getElementById('modalMemberBackground').textContent = card.dataset.background || "N/A";
+
+        modal.style.display = 'block';
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+}
 
 window.onload = function () {
     // Home section
@@ -507,4 +538,6 @@ window.onload = function () {
     InitFiltersData();
     // Hall Of Fame section
     InitSemestersData();
+    // Initialize the modal system (ONE TIME ONLY)
+    initModal();
 };
