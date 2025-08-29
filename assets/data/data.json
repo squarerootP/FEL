@@ -156,7 +156,7 @@
       "image": "./assets/images/events/news-700x435-5.jpg",
       "title": "Events 233333",
       "date": "2025-10-25",
-      "description": "FEL and a helpful event",
+      "description": "FEL and a helpful eventFEL and a helpful eventFEL and a helpful eventFEL and a helpful event",
       "tag": "no",
       "url": "https://www.facebook.com/fptenglishclub"
     }
@@ -246,7 +246,7 @@
   "honorableClubMembers": [
     {
       "name": "Jane Smith",
-      "role": "President",
+      "role": "Member",
       "image": "./assets/images/people/beautiful-woman-face-portrait-brown-background-removebg-preview.png",
       "achievements": "Led the club to win the national championship in 2023. Expanded membership by 200% through innovative recruitment strategies.",
       "contributions": "Established the annual leadership retreat. Created a mentorship program connecting club alumni with current members.",
@@ -255,7 +255,7 @@
     },
     {
       "name": "Daniel Nguyen",
-      "role": "Vice President",
+      "role": "Member",
       "image": "./assets/images/people/portrait-british-woman.jpeg",
       "achievements": "Coordinated internal events and workshops with record attendance. Played a key role in strategic planning for the academic year.",
       "contributions": "Streamlined communication between departments. Built a resource library for new members.",
@@ -264,7 +264,7 @@
     },
     {
       "name": "Sofia Hernandez",
-      "role": "Treasurer",
+      "role": "Member",
       "image": "./assets/images/people/senior-man-wearing-white-face-mask-covid-19-campaign-with-design-space.jpeg",
       "achievements": "Managed club finances with zero discrepancies. Secured external sponsorships totaling $5,000.",
       "contributions": "Created a budgeting system for all team leads. Led finance workshops for club members.",
@@ -273,7 +273,7 @@
     },
     {
       "name": "Michael Chen",
-      "role": "Secretary",
+      "role": "Member",
       "image": "./assets/images/people/woman-wearing-mask-face-closeup-covid-19-green-background.jpeg",
       "achievements": "Maintained 100% meeting documentation. Organized digital archives of past club activities.",
       "contributions": "Introduced a new system for attendance and records. Improved transparency in communication flow.",
@@ -282,7 +282,7 @@
     },
     {
       "name": "Emily Tran",
-      "role": "Public Relations Officer",
+      "role": "Member",
       "image": "./assets/images/people/beautiful-woman-face-portrait-brown-background.jpeg",
       "achievements": "Increased club social media following by 250%. Launched the club’s first monthly newsletter.",
       "contributions": "Ran successful promotional campaigns. Built collaborations with 3 external student orgs.",

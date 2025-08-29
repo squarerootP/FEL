@@ -1,114 +1,8 @@
 /*---------------------------------------
-  OWL CAROUSEL (HOME)           
------------------------------------------*/
-
-// Reusable function to initialize Owl Carousel
-function initializeOwlCarousel(selector) {
-    // Ensure we destroy the existing instance and reinitialize
-    $(selector).trigger('destroy.owl.carousel');
-
-    // Reinitialize Owl Carousel
-    $(selector).owlCarousel({
-        loop: true, // Enable looping
-        autoplay: true,
-        autoplayhoverpause: true,
-        lazyLoad: true,
-        nav: true,
-        autoplaytimeout: 100,
-        margin: 5,
-        padding: 5,
-        stagePadding: 5,
-        responsive: {
-            0: {
-                items: 1,
-                dots: false
-            },
-            728: {
-                items: 2,
-                dots: false
-            },
-            960: {
-                items: 3,
-                dots: false
-            },
-            1200: {
-                items: 4,
-                dots: true
-            }
-        }
-    });
-}
-
-async function displayOwlFeaturedEventsData() {
-    try {
-        const response = await fetch('./assets/data/data.json'); // Fetch data from the JSON file
-        const data = await response.json(); // Parse the JSON data
-
-        let output = "";
-
-        // Check if the array exists and loop through each event in the array
-        if (Array.isArray(data.events)) {
-
-            // 1. Sort events by date (newest first)
-            let sortedEvents = sortByTimestamp(data.events);
-
-            // 2. Take only the top 9 most recent events
-            let recentEvents = sortedEvents.slice(0, 9);
-
-            recentEvents.forEach(event => {
-                output += `
-                        <div class="ms-2 me-2 recent_event">
-                            <a href="${event.url}" class="d-block card-wrap" target="_blank">  
-                                <div class="card">
-                                    <img data-src="${event.image}" alt="${event.title}" class="event-card-img-top owl-lazy">
-                                    <div class="event-card-body">
-                                        <h5 class="card-title">${event.title}</h5>
-                                        <p>${event.description}</p>
-                                        <span>${event.tag}</span>
-                                        <span>(${event.date})</span>
-                                    </div>
-                                </div>
-                                <div class="hover-tooltip">Click to view ${event.url}</div> <!-- Add this -->
-                            </a>
-                        </div>
-                    `;
-            });
-        }
-
-        // Insert the generated HTML into the container
-        document.getElementById("events-container").innerHTML = output;
-
-        // Re-initialize Owl Carousel on the newly added elements
-        initializeOwlCarousel(".owl-carousel");
-    } catch (error) {
-        console.error('Error fetching JSON data:', error);
-    }
-}
-/*---------------------------------------
-  FILTER (EVENTS)        
------------------------------------------*/
-let currentfilterValue = ""; // Global access variable
-
-// Function to apply the content filter
-function applyFilter(tag) {
-    const filterValue = tag.getAttribute('data-filter'); // Get the selected filter value
-    const filterTags = document.querySelectorAll('.filter_tag');
-
-    currentfilterValue = filterValue;
-
-    // Remove 'selected' class from all tags and reset background
-    filterTags.forEach(tag => tag.classList.remove('selected'));
-
-    // Add 'selected' class to the clicked tag to highlight it
-    tag.classList.add('selected');
-
-    // Pass the tag so it can display on the screen based on filtered tag
-    displayFilteredEventsData(filterValue);
-}
-/*---------------------------------------
-  SORT              
+  SORT (HOME, EVENTS)              
 -----------------------------------------*/
 let isDescending = true; // Default is descending order
+let currentViewMode = 'filter'; // or 'search'
 
 // Function to convert human-readable date to Unix timestamp
 function getTimestamp(dateString) {
@@ -138,7 +32,83 @@ function toggleSort() {
 
     isDescending = !isDescending; // Toggle the sorting state
 
-    displayFilteredEventsData(currentfilterValue);
+    if (currentViewMode === 'search') {
+        displaySearchedEventsData();
+    } else {
+        displayFilteredEventsData(currentFilterValue);
+    }
+}
+/*---------------------------------------
+  RECENT EVENTS (HOME)        
+-----------------------------------------*/
+async function displayRecentEventsData() {
+    try {
+        const response = await fetch('./assets/data/data.json');
+        const data = await response.json();
+
+        let output = "";
+
+        if (Array.isArray(data.events)) {
+            const sortedEvents = sortByTimestamp(data.events);
+            const recentEvents = sortedEvents.slice(0, 4); // Show only 4
+
+            recentEvents.forEach(event => {
+                output += `
+                    <div class="col-12 col-sm-6 col-lg-3 d-flex mb-4">
+                        <a href="${event.url}" class="card-wrap d-flex w-100" target="_blank">  
+                            <div class="card h-100 w-100 d-flex flex-column">
+                                <img data-src="${event.image}" alt="${event.title}" class="event-card-img-top lazyload">
+                                <div class="event-card-body flex-grow-1">
+                                    <h5 class="card-title">${event.title}</h5>
+                                    <p>${event.description}</p>
+                                    <span>${event.tag}</span>
+                                    <span>(${event.date})</span>
+                                </div>
+                            </div>
+                            <div class="hover-tooltip">Click to view ${event.url}</div> <!-- Add this -->
+                        </a>
+                    </div>
+                `;
+            });
+        }
+
+        document.getElementById("events-container").innerHTML = `
+            <div class="row justify-content-center">${output}</div>
+        `;
+
+    } catch (error) {
+        console.error('Error fetching or displaying recent events:', error);
+    }
+}
+
+/*---------------------------------------
+  FILTER (EVENTS)        
+-----------------------------------------*/
+let currentfilterValue = ""; // Global access variable
+
+// Function to apply the content filter
+function applyFilter(tag) {
+    const filterValue = tag.getAttribute('data-filter'); // Get the selected filter value
+    const filterTags = document.querySelectorAll('.filter_tag');
+
+    // Only clear search and date input values, not filter tags
+    clearSearchInputs(); // Compatiable with displaySearchedEventsData
+
+    currentfilterValue = filterValue;
+
+    // Remove 'selected' class from all tags and reset background
+    filterTags.forEach(tag => tag.classList.remove('selected'));
+
+    // Add 'selected' class to the clicked tag to highlight it
+    tag.classList.add('selected');
+
+    // Pass the tag so it can display on the screen based on filtered tag
+    initDisplayFilteredEventsData(filterValue);
+}
+
+function removeSelectedTag() {
+    const filterTags = document.querySelectorAll('.filter_tag'); // Select all tags
+    filterTags.forEach(tag => tag.classList.remove('selected')); // Remove 'selected' from each
 }
 /*---------------------------------------
   FILTERED EVENTS (EVENTS)              
@@ -189,11 +159,18 @@ async function InitFiltersData() {
 let currentPage = 1; // Start with the first page
 let itemsPerPage = 6; // Number of items to show per page
 
+async function initDisplayFilteredEventsData(filterValue) {
+    currentPage = 1; // Restart at the first page
+    displayFilteredEventsData(filterValue);
+}
+
 async function displayFilteredEventsData(filterValue) {
     try {
         const response = await fetch('./assets/data/data.json'); // Fetch data from the JSON file
         const data = await response.json(); // Parse the JSON data
         currentFilterValue = filterValue; // Access globally
+
+        currentViewMode = 'filter' // Tell the global variable that the sort will be calling filter instead
 
         let filteredEvents = [];
 
@@ -210,6 +187,17 @@ async function displayFilteredEventsData(filterValue) {
         // Sort the filtered events by date (ascending or descending)
         filteredEvents = sortByTimestamp(filteredEvents);
 
+        // When the filtered result is empty
+        if (filteredEvents.length === 0) {
+            document.getElementById("filtered_events_group").innerHTML = `
+                <div class="col-12">
+                    <h3 style="color: var(--primary-color);">No events found for this filter.</h3>
+                </div>
+            `;
+            document.getElementById("pagination").innerHTML = ""; // Clear pagination
+            return; // Stop further execution
+        }
+
         // Pagination - calculate start and end for the page
         const totalPages = Math.ceil(filteredEvents.length / itemsPerPage);
         const startIndex = (currentPage - 1) * itemsPerPage
@@ -220,11 +208,11 @@ async function displayFilteredEventsData(filterValue) {
         // Check if the array exists and loop through each event in the array
         eventsToDisplay.forEach(event => {
             output += `
-                        <div class="col-12 col-sm-6 col-md-4 col-xl-4 filtered_event">
-                            <a href="${event.url}" class="d-block card-wrap" target="_blank">  
-                                <div class="card">
-                                    <img data-src="${event.image}" alt="${event.title}" class="event-card-img-top">
-                                    <div class="event-card-body">
+                        <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
+                            <a href="${event.url}" class="card-wrap d-flex w-100" target="_blank">  
+                                <div class="card h-100 w-100 d-flex flex-column">
+                                    <img data-src="${event.image}" alt="${event.title}" class="event-card-img-top lazyload">
+                                    <div class="event-card-body flex-grow-1">
                                         <h5 class="card-title">${event.title}</h5>
                                         <p>${event.description}</p>
                                         <span>${event.tag}</span>
@@ -241,25 +229,135 @@ async function displayFilteredEventsData(filterValue) {
         document.getElementById("filtered_events_group").innerHTML = output;
 
         // Generate Pagination Buttons
-        generatePagination(filteredEvents.length, totalPages);
-
-        // Manually set the src attribute for images to ensure they load
-        const images = document.querySelectorAll('img[data-src]');
-        images.forEach(img => {
-            const dataSrc = img.getAttribute('data-src');
-            if (dataSrc) {
-                img.setAttribute('src', dataSrc);  // Set the src to the actual image source
-                img.removeAttribute('data-src');  // Remove data-src to clean up
-            }
-        });
+        generatePagination(filteredEvents.length, totalPages, () => displayFilteredEventsData(filterValue));
     } catch (error) {
         console.error('Error fetching JSON data:', error);
     }
 }
+
+async function displaySearchedEventsData() {
+    const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+    const startDateInput = document.getElementById('startDate').value;
+    const endDateInput = document.getElementById('endDate').value;
+
+    const startDate = new Date(startDateInput);
+    const endDate = new Date(endDateInput);
+
+    // Check if both dates are valid and the range is logical
+    if (startDateInput && endDateInput && startDate > endDate) {
+        alert("⚠️ The end date must be after the start date.");
+        return;
+    }
+
+    try {
+        const response = await fetch('./assets/data/data.json'); // Fetch data from the JSON file
+        const data = await response.json(); // Parse the JSON data
+
+        currentViewMode = 'search' // Tell the global variable that the sort will be calling filter instead
+
+        // Normalize search
+        const keyword = searchTerm.trim().toLowerCase();
+        let matchedEvents = [];
+
+        // Check if the array exists and loop through each event in the array
+        if (Array.isArray(data.events)) {
+            matchedEvents = data.events.filter(event => {
+                const titleMatch = event.title.toLowerCase().includes(searchTerm);
+
+                const eventDate = new Date(event.date);
+                const dateMatch = (!isNaN(startDate) ? eventDate >= startDate : true) &&
+                    (!isNaN(endDate) ? eventDate <= endDate : true);
+
+                return titleMatch && dateMatch;
+            });
+        }
+
+        // Sort the filtered events by date (ascending or descending)
+        matchedEvents = sortByTimestamp(matchedEvents);
+
+        // When the filtered result is empty
+        if (matchedEvents.length === 0) {
+            document.getElementById("filtered_events_group").innerHTML = `
+                        <div class="col-12">
+                            <h3 style="color: var(--primary-color);">No events found for this search.</h3>
+                        </div>
+                    `;
+            document.getElementById("pagination").innerHTML = ""; // Clear pagination
+            return; // Stop further execution
+        }
+
+        // Pagination - calculate start and end for the page
+        const totalPages = Math.ceil(matchedEvents.length / itemsPerPage);
+        const startIndex = (currentPage - 1) * itemsPerPage
+        const endIndex = startIndex + itemsPerPage;
+        const eventsToDisplay = matchedEvents.slice(startIndex, endIndex);
+
+        let output = "";
+        // Check if the array exists and loop through each event in the array
+        eventsToDisplay.forEach(event => {
+            output += `
+                        <div class="col-12 col-sm-6 col-lg-4 d-flex mb-4">
+                            <a href="${event.url}" class="card-wrap d-flex w-100" target="_blank">  
+                                <div class="card h-100 w-100 d-flex flex-column">
+                                    <img data-src="${event.image}" alt="${event.title}" class="event-card-img-top lazyload">
+                                    <div class="event-card-body flex-grow-1">
+                                        <h5 class="card-title">${event.title}</h5>
+                                        <p>${event.description}</p>
+                                        <span>${event.tag}</span>
+                                        <span>(${event.date})</span>
+                                    </div>
+                                </div>
+                                <div class="hover-tooltip">Click to view ${event.url}</div> <!-- Add this -->
+                            </a>
+                        </div>
+                    `;
+        });
+
+        removeSelectedTag(); // Remove all selected tag first
+        // Insert the generated HTML into the container
+        document.getElementById("filtered_events_group").innerHTML = output;
+
+        // Generate Pagination Buttons
+        generatePagination(matchedEvents.length, totalPages, displaySearchedEventsData);
+    } catch (error) {
+        console.error('Error fetching JSON data:', error);
+    }
+}
+
+function clearAllFilters() {
+    // Clear all input fields
+    document.getElementById('searchInput').value = '';
+    document.getElementById('startDate').value = '';
+    document.getElementById('endDate').value = '';
+
+    // Optionally, blur and refocus to reset browser autofill style (especially for text input)
+    document.getElementById('searchInput').blur();
+    document.getElementById('searchInput').focus();
+
+    document.getElementById('startDate').blur();
+    document.getElementById('endDate').blur();
+
+    // Clear any validation or error messages
+    document.getElementById('errorMessage').textContent = '';
+
+    // Reload full list or reset the filtered display
+    currentPage = 1;
+    // Apply the "All" filter after filters are loaded
+    const allFilterTag = document.querySelector('.filter_tag[data-filter="all"]');
+    if (allFilterTag) {
+        applyFilter(allFilterTag); // Apply the "All" filter
+    }
+}
+
+function clearSearchInputs() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('startDate').value = '';
+    document.getElementById('endDate').value = '';
+}
 /*---------------------------------------
   PAGINATION (EVENTS)              
 -----------------------------------------*/
-function generatePagination(totalItems, totalPages) {
+function generatePagination(totalItems, totalPages, updateFunction) {
     const pagination = document.getElementById('pagination');
     let paginationHTML = '';
 
@@ -321,7 +419,7 @@ function generatePagination(totalItems, totalPages) {
             const newPage = parseInt(pageLink.dataset.page);
             if (newPage !== currentPage) {
                 currentPage = newPage;
-                displayFilteredEventsData(currentFilterValue);
+                updateFunction(); // use callback
             }
         });
     });
@@ -331,7 +429,7 @@ function generatePagination(totalItems, totalPages) {
         e.preventDefault();
         if (currentPage !== 1) {
             currentPage = 1;
-            displayFilteredEventsData(currentFilterValue);
+            updateFunction(); // use callback
         }
     });
 
@@ -340,7 +438,7 @@ function generatePagination(totalItems, totalPages) {
         e.preventDefault();
         if (currentPage > 1) {
             currentPage--;
-            displayFilteredEventsData(currentFilterValue);
+            updateFunction(); // use callback
         }
     });
 
@@ -349,7 +447,7 @@ function generatePagination(totalItems, totalPages) {
         e.preventDefault();
         if (currentPage < totalPages) {
             currentPage++;
-            displayFilteredEventsData(currentFilterValue);
+            updateFunction(); // use callback
         }
     });
 
@@ -358,7 +456,7 @@ function generatePagination(totalItems, totalPages) {
         e.preventDefault();
         if (currentPage !== totalPages) {
             currentPage = totalPages;
-            displayFilteredEventsData(currentFilterValue);
+            updateFunction(); // use callback
         }
     });
 }
@@ -449,16 +547,6 @@ async function displayMembersBySemesterData(event) {
         });
         // Insert the generated HTML into the container
         document.getElementById("semester-club_member").innerHTML = outputClubMembers;
-
-        // Manually set the src attribute for images to ensure they load
-        const images = document.querySelectorAll('img[data-src]');
-        images.forEach(img => {
-            const dataSrc = img.getAttribute('data-src');
-            if (dataSrc) {
-                img.setAttribute('src', dataSrc);  // Set the src to the actual image source
-                img.removeAttribute('data-src');  // Remove data-src to clean up
-            }
-        });
     } catch (error) {
         console.error('Error fetching JSON data:', error);
     }
@@ -478,7 +566,7 @@ function createMemberCard(member) {
                 data-achievements="${member.achievements || ''}"
                 data-contributions="${member.contributions || ''}"
                 data-background="${member.background || ''}">
-                <img data-src="${member.image}" alt="${member.name}" class="event-card-img-top">
+                <img data-src="${member.image}" alt="${member.name}" class="event-card-img-top lazyload">
                 <div class="member-role">
                     <span>${member.role}</span>
                 </div>
@@ -533,39 +621,43 @@ function initModal() {
 /*---------------------------------------
   BANNER (EVENTS)              
 -----------------------------------------*/
-function initEventsBackground() {
-    const header = document.getElementById('events-site-header');
+function initSectionBackground(headerId) {
+    const header = document.getElementById(headerId);
     if (!header) return;
 
     const bg = header.getAttribute('data-bg');
-    if (bg) {
-        header.style.background = `
-            linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0) 100%),
-            url('${bg}')
-        `;
-        header.style.backgroundSize = "cover";
-        header.style.backgroundPosition = "center calc(100% - 100px)";
-        header.style.backgroundRepeat = "no-repeat";
-        header.style.backgroundAttachment = "fixed";
-    }
+    if (!bg) return;
+
+    header.style.background = `
+        linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0) 100%),
+        url('${bg}')
+    `;
+    header.style.backgroundSize = "cover";
+    header.style.backgroundPosition = "center center";
+    header.style.backgroundRepeat = "no-repeat";
+    header.style.backgroundAttachment = "scroll";
 }
-function initHallOfFameBackground() {
-    const header = document.getElementById('hof-site-header');
+
+function initMainBackground(headerId) {
+    const header = document.getElementById(headerId);
     if (!header) return;
 
     const bg = header.getAttribute('data-bg');
-    if (bg) {
-        header.style.background = `
-            linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0) 100%),
-            url('${bg}')
-        `;
-        header.style.backgroundSize = "cover";
-        header.style.backgroundPosition = "center calc(100% - 145px)";
-        header.style.backgroundRepeat = "no-repeat";
-        header.style.backgroundAttachment = "fixed";
-    }
+    if (!bg) return;
+
+    header.style.background = `
+        linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0) 100%),
+        url('${bg}')
+    `;
+    header.style.backgroundSize = "cover";
+    header.style.backgroundPosition = "center center";
+    header.style.backgroundRepeat = "no-repeat";
+    header.style.backgroundAttachment = "fixed";
 }
 
+/*---------------------------------------
+  MEMBER (HALL OF FAME)              
+-----------------------------------------*/
 function initMemberBackground(config = { width: '130vh', height: '70vh', opacity: 0.3 }) {
     const header = document.getElementById('modal-content');
     if (!header) return;
@@ -630,18 +722,47 @@ async function initHippoBackground() {
     }
 }
 
+function copyEmail() {
+    navigator.clipboard.writeText("fel.daihocfptcantho@gmail.com")
+        .then(() => alert("Email copied to clipboard!"))
+        .catch(() => alert("Failed to copy email."));
+}
+
 
 
 window.onload = function () {
-    // Home section
-    displayOwlFeaturedEventsData();
-    // Events section
-    InitFiltersData();
-    initEventsBackground();
-    initHallOfFameBackground();
-    // Hall Of Fame section
-    InitSemestersData();
-    // Initialize the modal system (Hall Of Fame)
-    initModal();
-    initHippoBackground();
+    if (window.location.pathname.endsWith("events.html")) {
+        InitFiltersData();
+        initSectionBackground('events-site-header', 60, 100, 220, 200, 200, 200);
+        document.getElementById("searchButton").addEventListener("click", function () {
+            const searchValue = document.getElementById("searchInput").value.trim();
+            displaySearchedEventsData(searchValue);
+        });
+        document.getElementById('clearButton').addEventListener('click', () => {
+            clearAllFilters()
+        });
+    }
+    else
+        if (window.location.pathname.endsWith("hall-of-fame.html")) {
+            initSectionBackground('hof-site-header', 130, 100, 220, 200, 200, 220);
+            InitSemestersData();
+            initModal();
+            initHippoBackground();
+        } else
+            if (window.location.pathname.endsWith("about.html")) {
+                initSectionBackground('about-site-header', 90, 100, 140, 160, 160, 160);
+            } else
+                if (window.location.pathname.endsWith("faq.html")) {
+                    initSectionBackground('faq-site-header', 0, 200, 140, 160, 160, 160);
+                } else
+                    if (window.location.pathname.endsWith("contact.html")) {
+                        initSectionBackground('contact-site-header', 0, 180, 140, 90, 90, 90);
+                    } else
+                        if (window.location.pathname.endsWith("developer.html")) {
+                            initSectionBackground('developer-site-header', 20, 130, 130, 90, 150, 165);
+                            initSectionBackground('developer', 0);
+                        } else {
+                            displayRecentEventsData();
+                        }
+    initMainBackground('main-background', 0);
 };
