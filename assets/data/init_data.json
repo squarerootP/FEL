@@ -1,0 +1,591 @@
+{
+  "events": [
+    {
+      "image": "./assets/images/events/boxing_day.jpg",
+      "title": "Boxing Day",
+      "date": "2023-12-20",
+      "description": "Join us for Boxing Day, a special event to celebrate the day after Christmas.",
+      "tag": "debut",
+      "url": "https://www.facebook.com/share/p/1E9p5u5E9W/"
+    },
+    {
+      "image": "./assets/images/events/tet_holiday.jpg",
+      "title": "Tet Holiday",
+      "date": "2024-01-30",
+      "description": "Join us for Tet Holiday, a special event to celebrate the Lunar New Year.",
+      "tag": "periodic",
+      "url": "https://www.facebook.com/share/p/1EHzhRbnY7/"
+    },
+    {
+      "image": "./assets/images/events/mem_recruit_su24.jpg",
+      "title": "Member Recruitment SU24",
+      "date": "2024-05-09",
+      "description": "Join us for Member Recruitment SU24, an exciting event to welcome new members.",
+      "tag": "featured",
+      "url": "https://www.facebook.com/share/p/17AbJcXSvB/"
+    },
+    {
+      "image": "./assets/images/events/summer_games_splash.jpg",
+      "title": "Summer Games Splash",
+      "date": "2024-08-09",
+      "description": "Join us for the Summer Games Splash, a fun event filled with games and activities.",
+      "tag": "debut",
+      "url": "https://www.facebook.com/share/v/1GUc7K9E4x/"
+    },
+    {
+      "image": "./assets/images/events/exec_board_elec_fa24.jpg",
+      "title": "Executive Board Election FA24",
+      "date": "2024-09-18",
+      "description": "Join us for the Executive Board Election FA24, an important event to elect our new club leaders.",
+      "tag": "periodic",
+      "url": "https://www.facebook.com/share/p/1KnMkkUbB5/"
+    },
+    {
+      "image": "./assets/images/events/morocco.jpg",
+      "title": "Morocco - A Country Of Diversity",
+      "date": "2024-10-01",
+      "description": "Our pleasure to have Mr.Yehya on board to share insights about Morocco's rich culture and diversity.",
+      "tag": "debut",
+      "url": "https://www.facebook.com/share/r/16cy6E5Ym7/"
+    },
+    {
+      "image": "./assets/images/events/mem_recruit_fa24.jpg",
+      "title": "Member Recruitment and Club Birthday",
+      "date": "2024-10-11",
+      "description": "Join us for Member Recruitment and Club Birthday, an exciting event to celebrate our club's anniversary and welcome new members.",
+      "tag": "periodic",
+      "url": "https://www.facebook.com/share/p/17M8gHQXgS/"
+    },
+    {
+      "image": "./assets/images/events/fel_mystery_night.jpg",
+      "title": "FEL x Mystery Night",
+      "date": "2024-10-31",
+      "description": "Join us for FEL x Mystery Night, an exciting event filled with mystery and fun.",
+      "tag": "debut",
+      "url": "https://www.facebook.com/share/p/1BtzbdYSTC/"
+    },
+    {
+      "image": "./assets/images/events/movie_night_fa24.jpg",
+      "title": "Movie Night",
+      "date": "2024-11-06",
+      "description": "Join us for Movie Night, a fun event where we will watch and discuss popular films.",
+      "tag": "comeback",
+      "url": "https://www.facebook.com/share/p/1CeSJrphQu/"
+    },
+    {
+      "image": "./assets/images/events/teacher_day_fa24.jpg",
+      "title": "Teacher's Day",
+      "date": "2024-11-20",
+      "description": "Join us for Teacher's Day, a special event to honor and appreciate our dedicated educators.",
+      "tag": "periodic",
+      "url": "https://www.facebook.com/share/v/1CPCzzAuJD/"
+    },
+    {
+      "image": "./assets/images/events/elevator_pitch_fa24.jpg",
+      "title": "Elevator Pitch",
+      "date": "2024-11-22",
+      "description": "Join us for the Elevator Pitch event, where you can practice your presentation skills and receive feedback.",
+      "tag": "comeback",
+      "url": "https://www.facebook.com/share/p/1FBiLkZn7u/"
+    },
+    {
+      "image": "./assets/images/events/2nd_boxing_day.jpg",
+      "title": "2nd Boxing Day",
+      "date": "2024-12-25",
+      "description": "Join us for the 2nd Boxing Day event, a day filled with fun activities and surprises.",
+      "tag": "comeback",
+      "url": "https://www.facebook.com/share/p/17DtrxmPJs/"
+    },
+    {
+      "image": "./assets/images/events/mem_recruit_sp25.jpg",
+      "title": "Member Recruitment",
+      "date": "2025-03-07",
+      "description": "Join us for the Member Recruitment event, where you can learn about our club and how to get involved.",
+      "tag": "periodic",
+      "url": "https://www.facebook.com/share/p/1V4E1LVVGQ/"
+    },
+    {
+      "image": "./assets/images/events/enrollment_fest.jpg",
+      "title": "Enrollment Fest",
+      "date": "2025-03-12",
+      "description": "Join us for the Enrollment Fest, where you can learn about our club activities, meet new members, and sign up for exciting events.",
+      "tag": "periodic",
+      "url": "https://www.facebook.com/share/p/14DSWCgjW1y/"
+    },
+    {
+      "image": "./assets/images/events/hippo_splash_bash.jpg",
+      "title": "Hippo Splash Bash",
+      "date": "2025-03-14",
+      "description": "Join us for the Hippo Splash Bash, a fun-filled event with water games, music, and food to celebrate the end of the semester.",
+      "tag": "debut",
+      "url": "https://www.facebook.com/share/p/1C6QArgmSa/"
+    },
+    {
+      "image": "./assets/images/events/spelling_hippo.jpg",
+      "title": "Spelling Hippo",
+      "date": "2025-03-24",
+      "description": "Join us for the Spelling Hippo event, where we will have fun with words and improve our spelling skills through engaging activities.",
+      "tag": "debut",
+      "url": "https://www.facebook.com/fptenglishclub/posts/pfbid0vkmYBGmTzpuwDc7yezGA4uqcFximcaHcwwUeconVaC4fCq5NhaPDczuKyNkG9dGDl"
+    },
+    {
+      "image": "./assets/images/events/colors_of_culture_india.jpg",
+      "title": "Colors of Culture: India",
+      "date": "2025-04-20",
+      "description": "Join us for 'Colors of Culture: India', an event celebrating the rich traditions and vibrant culture of India through food, music, and dance.",
+      "tag": "debut",
+      "url": "https://www.facebook.com/share/p/16qBQpfaU4/"
+    },
+    {
+      "image": "./assets/images/events/email_is_easy.jpg",
+      "title": "Email is Easy",
+      "date": "2024-04-22",
+      "description": "Join us for the 'Email is Easy' workshop, where we will simplify email communication and enhance your professional skills.",
+      "tag": "comeback",
+      "url": "https://www.facebook.com/fptenglishclub/posts/pfbid0U6noCJjqzopcWSURA6ktLcY7Yaw37S4QwYyETc2rfWRFdntqXgjjUYt5JHhoCiPdl"
+    },
+    {
+      "image": "./assets/images/events/semester_summary_su25.jpg",
+      "title": "Semester Summary SU25",
+      "date": "2025-06-5",
+      "description": "Join us for the Semester Summary SU25 event, where we recap the highlights and achievements of the semester.",
+      "tag": "periodic",
+      "url": "https://www.facebook.com/share/p/1Rvn6MFmYB/"
+    },
+    {
+      "image": "./assets/images/events/2nd_sport_morning.jpg",
+      "title": "2nd Sports Morning",
+      "date": "2025-6-15",
+      "description": "Join us for the 2nd Sports Morning event, a day filled with fun and fitness activities.",
+      "tag": "comeback",
+      "url": "https://www.facebook.com/share/p/1A4agVsWMy/"
+    },
+    {
+      "image": "./assets/images/events/2nd_summer_games_splash.jpg",
+      "title": "2nd Summer Games Splash",
+      "date": "2025-8-21",
+      "description": "Join us for the 2nd Summer Games Splash event, a massive comeback.",
+      "tag": "comeback",
+      "url": "https://www.facebook.com/share/v/1Awv2kZRyu/"
+    }
+
+  ],
+
+  "filterEvents": [
+    {
+      "tag": "popular"
+    },
+    {
+      "tag": "periodic"
+    },
+    {
+      "tag": "comeback"
+    },
+    {
+      "tag": "debut"
+    }
+  ],
+
+  "semesters": [
+    {
+      "semester": "FA25"
+    },
+    {
+      "semester": "SU25"
+    },
+    {
+      "semester": "SP25"
+    },
+    {
+      "semester": "FA24"
+    },
+    {
+      "semester": "SU24"
+    },
+    {
+      "semester": "SP24"
+    },
+    {
+      "semester": "FA23"
+    },
+    {
+      "semester": "SU23"
+    },
+    {
+      "semester": "SP23"
+    },
+    {
+      "semester": "FA22"
+    },
+    {
+      "semester": "SU22"
+    },
+    {
+      "semester": "SP22"
+    },
+    {
+      "semester": "FA21"
+    },
+    {
+      "semester": "SU21"
+    },
+    {
+      "semester": "SP21"
+    },
+    {
+      "semester": "FA20"
+    }
+  ],
+
+  "honorableExecutiveBoardMembers": [
+    {
+      "name": "Phan Huynh Vu Bao",
+      "role": "President",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "FA23,SP24,SU24,FA24,SP25,SU25"
+    },
+    {
+      "name": "Phan Huynh Vu Bao",
+      "role": "Vice President",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SU23"
+    },
+    {
+      "name": "Bui Anh Ngoc",
+      "role": "Vice President",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SP23,SU23,FA23,SP24,SU24,FA24,SP25,SU25"
+    },
+    {
+      "name": "Nguyen Van Phong",
+      "role": "Vice President",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "FA24,SP25,SU25"
+    },
+    {
+      "name": "Tran Quang Dat",
+      "role": "Treasurer",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "FA24,SP25,SU25"
+    },
+    {
+      "name": "Le Nguyen Bao Nghi",
+      "role": "Secretary",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SP23,SU23,FA23,SP24,SU24,FA24,SP25,SU25"
+    },
+    {
+      "name": "Phan Thi Diem Quynh",
+      "role": "President",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "FA20"
+    },
+    {
+      "name": "Phan Yen Nhi",
+      "role": "Secretary",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "FA20,SP21,SU21"
+    },
+    {
+      "name": "Nguyen Thanh Huong",
+      "role": "Vice President",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "FA20,SP21"
+    },
+    {
+      "name": "Le Hoang Tien",
+      "role": "Vice President",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "FA20"
+    },
+    {
+      "name": "Bui Diem Thy",
+      "role": "Treasurer",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "FA20,SP21,SU21"
+    },
+    {
+      "name": "Chau Thuy Tien",
+      "role": "President",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SP21,SU21"
+    },
+    {
+      "name": "Nguyen Trung Hau",
+      "role": "Vice President",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SP21"
+    },
+    {
+      "name": "Pham Loc No",
+      "role": "Vice President",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SU21"
+    },
+    {
+      "name": "Pham Loc No",
+      "role": "President",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "FA21,SP22,SU22,FA22"
+    },
+    {
+      "name": "Lam Tien Thanh",
+      "role": "Vice President",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SU21,FA21,SP22,SU22,FA22,FA23,SP24,SU24"
+    },
+    {
+      "name": "Nguyen Thi Tra My",
+      "role": "Secretary",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "FA21,SP22,SU22,FA22"
+    },
+    {
+      "name": "Nguyen Bao Tran",
+      "role": "Treasurer",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "FA21,SP22,SU22,FA22"
+    },
+    {
+      "name": "Nguyen Ngoc Kieu Duy",
+      "role": "Vice President",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "FA21,SP22,SU22,FA22"
+    },
+    {
+      "name": "Nguyen Ngoc Kieu Duy",
+      "role": "President",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SP23"
+    },
+    {
+      "name": "Thai Nguyen Anh Duy",
+      "role": "Vice President",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SP23"
+    },
+    {
+      "name": "Thai Nguyen Anh Duy",
+      "role": "President",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SU23"
+    },
+    {
+      "name": "Nguyen Ngoc Hoang Kim",
+      "role": "Treasurer",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SP23,SU23"
+    },
+    {
+      "name": "Quach Ngoc Quynh Trang",
+      "role": "Treasurer",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "FA23,SP24,SU24"
+    }
+  ],
+
+  "honorableClubMembers": [
+    {
+      "name": "Le Anh Khoa",
+      "role": "Member",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SP25"
+    },
+    {
+      "name": "Nguyen Ngoc Huong",
+      "role": "Member",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SP25"
+    },
+    {
+      "name": "Nguyen Thuy Linh",
+      "role": "Member",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SP25"
+    },
+    {
+      "name": "Dinh Thai Thao Van",
+      "role": "Member",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SP25"
+    },
+    {
+      "name": "Thai Hoang Huan",
+      "role": "Member",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SP25"
+    },
+    {
+      "name": "Tong Anh Hao",
+      "role": "Member",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SU24"
+    },    
+    {
+      "name": "Tran Cong Luan",
+      "role": "Member",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SU24"
+    },
+    {
+      "name": "Nguyen Ngoc Huong",
+      "role": "Member",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SU24"
+    },
+    {
+      "name": "Bui Dinh Tri",
+      "role": "Member",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SU24"
+    },
+    {
+      "name": "Nguyen Tran Truc Linh",
+      "role": "Member",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "SU24"
+    },
+    {
+      "name": "Nguyen Van Phong",
+      "role": "Member",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "FA23"
+    },
+    {
+      "name": "Tran Quang Dat",
+      "role": "Member",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "FA23"
+    },
+    {
+      "name": "Vo Nguyen Ngan Vy",
+      "role": "Member",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "FA23"
+    },
+    {
+      "name": "Nguyen Tran Quang Hieu",
+      "role": "Member",
+      "image": "./assets/images/people/hippo.png",
+      "achievements": ".",
+      "contributions": ".",
+      "background": ".",
+      "semester": "FA23"
+    }
+  ],
+
+  "hippo": {
+    "image": "./assets/images/hippo/hippo fel shirt.png"
+  }
+}
